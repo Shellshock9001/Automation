@@ -69,7 +69,7 @@ done
 ## GitHub URL to the Sound File
 This variable stores the URL to the sound file that will be preloaded and played at the end of the script. The file is hosted on GitHub and can be replaced with any other direct link to an audio file.
 ```bash
-Scourge_horn_mp3="https://raw.githubusercontent.com/Shellshock9001/mp3/main/scourge_horn.ogg"
+Scourge_horn_mp3="https://raw.githubusercontent.com/Shellshock9001/mp3_files/main/scourge_horn.ogg"
 ```
 ## Function to Clean Up All mpv Processes
 This function is designed to terminate all mpv processes that were started by the script. It ensures that no lingering processes remain after the script completes.
