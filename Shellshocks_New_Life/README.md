@@ -2,6 +2,14 @@
 
 This document provides an overview and description of each tool installed by the setup script. Each section includes the name of the tool, a brief description, and basic usage instructions.
 
+## Automate the installation process for any cloud environment.
+1. Download the script from a remote GitHub repository.
+2. Modify the script's permissions to make it executable.
+3. Execute the script with elevated (sudo) permissions.
+```bash
+curl -O https://raw.githubusercontent.com/Shellshock9001/Automation/refs/heads/main/Shellshocks_New_Life/shellshocks_new_life.sh && sudo chmod +x shellshocks_new_life.sh && sudo ./shellshocks_new_life.sh
+```
+
 ## Common Dependencies
 - **libcurl4-openssl-dev**
   - **Description:** Development files and documentation for libcurl (OpenSSL flavor).
