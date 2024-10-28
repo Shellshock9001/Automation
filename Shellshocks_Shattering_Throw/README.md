@@ -37,22 +37,47 @@ SharpHound collects data for BloodHound, which helps identify privilege escalati
 
 Ensure that all the necessary security tools (**Sherlock**, **PowerUp**, **JAWS**, **PowerView**, **SharpHound**) are hosted on a server or available for download. You can modify the script to point to specific URLs for tool downloads if necessary.
 
-### Steps to Run
+##
+### Steps to Run Shellshocks Shattering Throw:
+1. Pre-Download the Required Scripts from GitHub:
+First, you need to download the required security tools (Sherlock, PowerUp, JAWS, PowerView, SharpHound) from my GitHub repository and host them on a simple Python web server.
 
-1. **Clone or Download the Script**: 
-   Download the script from this repository and save it to your target system or testing environment.
-   
-2. **Run the Script**: 
-   Open PowerShell as Administrator and execute the script using:
-   
-   ```powershell
-   ./shellshocks_shattering_throw_none_win_trading.ps1
-   ```
-3. **Review Results:**
-   The script will automatically create directories, download the tools (if needed), and execute them. The results of each tool will be saved to the file:
-   ```powershell
-   C:\Temp\Shellshock\shellshocks_security_checks.txt
-   ```
+Clone or Download the Repository:
+
+```bash
+git clone https://github.com/Shellshock9001/your-repo-name
+```
+Host a Python Web Server: Navigate to the folder containing the scripts you’ve downloaded and run a Python web server:
+
+```bash
+cd /path/to/your/downloaded/scripts
+```
+```bash
+python3 -m http.server 8000
+```
+2. Set the $AttackerMachine to Your IP:
+You'll need to set the $AttackerMachine variable in the shellshocks_shattering_throw_none_win_trading.ps1 script to point to your IP address. Replace the current value with the IP of your Python web server. For example:
+
+```powershell
+$AttackerMachine = "http://Your_AttackingMachine_IP"
+```
+3. Transfer the Script to the Target Machine:
+Download or transfer the script to the target system or testing environment. This can be done through SCP, a USB drive, or any other preferred method.
+
+4. Run the Script:
+Open PowerShell as Administrator on the target system, navigate to the directory where the script is located, and run the script:
+
+```powershell
+./shellshocks_shattering_throw_none_win_trading.ps1
+```
+5. Review the Results:
+The script will automatically:
+- Create the required directories (`C:\Temp\Shellshock`).
+- Download and execute the tools (Sherlock, PowerUp, JAWS, PowerView, and SharpHound).
+- Save the output to the following file:
+`C:\Temp\Shellshock\shellshocks_security_checks.txt`
+- The results will show potential local privilege escalation vulnerabilities and misconfigurations found by the tools in the Windows environment.
+
 ##
 ### Customization
 You can modify several hardcoded variables in the script to suit your environment:
